@@ -9,11 +9,15 @@
 
 <body>
     <div>
-        <h1 class = "lotteryNum">Hoosier lottery numbers: </h1>
+        <h1 class="lotteryNum">Hoosier lottery "for loop" numbers: </h1>
+    </div>
+    <div>
+        <h1 class="lotteryNum2">Hoosier lottery "while loop" numbers: </h1>
     </div>
     
+    
     <script>
-         let displayResponse=document.querySelector(".lotteryNum")
+        let displayResponse = document.querySelector(".lotteryNum")
 
         let ranNumString = "";
         //  Create a for loop that executes exactly 6 times.
@@ -27,6 +31,26 @@
         // Display the string in a heading on the web page
         displayResponse.textContent += ranNumString;
 
+       
+
+
+
+        //while loop
+        let displayWhileResponse = document.querySelector(".lotteryNum2")
+        let ranNumStr = "";
+        let i = 0;
+        //  Create a while loop that executes exactly 6 times.
+        while (i < 6) {
+            // Generate a random number between 1 and 49
+            let randomNum = Math.floor(Math.random() * 49) + 1;
+            // Add the random number to the string
+            ranNumStr += randomNum + " ";
+            //increment the while loop
+            i++
+        }
+
+        // Display the string in a heading on the web page
+        displayWhileResponse.textContent += ranNumStr;
     </script>
 </body>
 
